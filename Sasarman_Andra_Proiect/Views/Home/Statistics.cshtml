@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Sasarman_Andra_Proiect.Models.LibraryViewModels.OrderGroup>
+@{
+    ViewData["Title"] = "Ordered Books Statistics";
+}
+<h2>Ordered Courses Statistics</h2>
+<table>
+    <tr>
+        <th>
+            Order Date
+        </th>
+        <th>
+            Ordered Courses
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDate)
+            </td>
+            <td>
+                @item.CourseCount
+            </td>
+        </tr>
+    }
+</table>
